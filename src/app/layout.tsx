@@ -5,6 +5,8 @@ import { Header } from '@/components/header';
 
 const inter = Inter({ subsets: ['latin'] });
 
+export const runtime = 'nodejs';
+
 export const metadata = {
   title: 'Kaafi',
 };
