@@ -1,4 +1,4 @@
-import { SignUp } from '@clerk/nextjs';
+import { SignUp } from '@clerk/nextjs/app-beta';
 
 const SignUpPage = () => {
   return (

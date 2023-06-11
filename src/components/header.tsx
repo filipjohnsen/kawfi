@@ -1,4 +1,4 @@
-import { UserButton, SignedIn } from '@clerk/nextjs';
+import { UserButton, SignedIn } from '@clerk/nextjs/app-beta';
 import Link from 'next/link';
 
 export const Header = () => {
