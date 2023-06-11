@@ -1,11 +1,9 @@
-import { ClerkProvider } from '@clerk/nextjs';
+import { ClerkProvider } from '@clerk/nextjs/app-beta';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { Header } from '@/components/header';
 
 const inter = Inter({ subsets: ['latin'] });
-
-export const runtime = 'nodejs';
 
 export const metadata = {
   title: 'Kaafi',
