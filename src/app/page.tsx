@@ -7,7 +7,7 @@ const Home = async () => {
     <div className="px-4">
       <main className="mx-auto max-w-[900px]">
         <div className="grid grid-cols-3 gap-6 pt-12">
-          {places.map((place) => (
+          {/* {places.map((place) => (
             <div
               key={place.id}
               className="overflow-hidden rounded-lg border border-purple-400 bg-purple-50 shadow-md shadow-purple-50"
@@ -21,7 +21,7 @@ const Home = async () => {
                 </div>
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
       </main>
     </div>
