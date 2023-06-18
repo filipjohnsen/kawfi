@@ -1,6 +1,5 @@
 import { db } from '@/db';
 import { place } from '@/db/schema/place';
-import Link from 'next/link';
 
 const Home = async () => {
   const places = await db.select().from(place).execute();
@@ -20,12 +19,6 @@ const Home = async () => {
                   <div className="h-1 w-1 rounded-full bg-gray-400"></div>
                   <p className="text-[12px] text-gray-400">{place.address}</p>
                 </div>
-                <Link
-                  href={`/place/${place.id}`}
-                  className="mx-auto w-fit rounded-lg bg-purple-800 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white shadow-md shadow-purple-50"
-                >
-                  Review
-                </Link>
               </div>
             </div>
           ))}
