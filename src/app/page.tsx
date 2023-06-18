@@ -2,7 +2,7 @@ import { db } from '@/db';
 import { place } from '@/db/schema/place';
 
 const Home = async () => {
-  const places = await db.select().from(place).execute();
+  // const places = await db.select().from(place).execute();
   return (
     <div className="px-4">
       <main className="mx-auto max-w-[900px]">
