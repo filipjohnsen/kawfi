@@ -1,2 +1,0 @@
-ALTER TABLE `place` MODIFY COLUMN `lat` varchar(255) NOT NULL;
-ALTER TABLE `place` MODIFY COLUMN `lng` varchar(255) NOT NULL;
