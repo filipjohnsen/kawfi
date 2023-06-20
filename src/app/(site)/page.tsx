@@ -12,7 +12,7 @@ const Home = async () => {
   return (
     <div className="px-4">
       <main className="mx-auto max-w-[900px]">
-        <div className="grid grid-cols-2 gap-6 pt-12">
+        <div className="grid gap-6 pt-12">
           {places.map((place) => (
             <Link href={`/place/${place._id}`} key={place._id}>
               <Image

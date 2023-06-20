@@ -48,6 +48,12 @@ export default defineConfig({
             to: [{ type: "place" }],
           },
           {
+            name: "user",
+            title: "User",
+            type: "text",
+            validation: (Rule) => Rule.required(),
+          },
+          {
             name: "overallRating",
             title: "Overall Rating",
             type: "number",
