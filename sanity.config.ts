@@ -50,7 +50,7 @@ export default defineConfig({
           {
             name: "user",
             title: "User",
-            type: "text",
+            type: "string",
             validation: (Rule) => Rule.required(),
           },
           {
