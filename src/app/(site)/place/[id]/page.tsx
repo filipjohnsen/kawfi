@@ -20,7 +20,7 @@ const PlacePage = async ({
 
   return (
     <div className="mx-auto grid h-screen max-w-[600px] grid-rows-[auto_1fr] bg-[#14333a]">
-      <div className="relative overflow-hidden rounded-b-3xl shadow-md shadow-[#225560]/40">
+      <div className="relative overflow-hidden rounded-b-3xl shadow-lg">
         <Image
           src={urlBuilder(place.image).width(600).height(300).url()}
           width={600}

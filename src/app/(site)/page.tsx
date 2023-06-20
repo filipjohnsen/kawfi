@@ -10,32 +10,33 @@ const Home = async () => {
     `*[_type == "place"]{_id, name, name, adress, image}|order(name asc)`
   );
   return (
-    <div className="px-4">
-      <main className="mx-auto max-w-[900px]">
-        <div className="grid gap-6 pt-12">
-          {places.map((place) => (
-            <Link href={`/place/${place._id}`} key={place._id}>
-              <Image
-                src={urlBuilder(place.image).width(1000).height(500).url()}
-                width={500}
-                height={250}
-                alt=""
-                className="rounded-md shadow-md"
-              />
-              <div className="p-2">
-                <div className="flex items-center gap-2">
-                  <h2 className="text-[15px] font-semibold">{place.name}</h2>
-                  <span className="text-[10px] text-slate-800">{place.adress}</span>
+    <main className="mx-auto max-w-[600px] bg-[#14333a] px-4 text-white">
+      <div className="grid gap-6 py-8">
+        {places.map((place) => (
+          <Link
+            className="relative overflow-hidden rounded-3xl shadow-md"
+            href={`/place/${place._id}`}
+            key={place._id}
+          >
+            <Image
+              src={urlBuilder(place.image).width(600).height(300).url()}
+              width={600}
+              height={300}
+              alt=""
+              className="rounded-md shadow-md"
+            />
+            <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#225560] to-transparent"></div>
+            <div className="absolute inset-0 z-20 flex items-end px-6 pb-4">
+              <div className="flex w-full items-center justify-between">
+                <div>
+                  <h2 className="text-[24px] font-semibold">{place.name}</h2>
                 </div>
-                <Suspense fallback="Loading...">
-                  <PlaceReview _id={place._id} />
-                </Suspense>
               </div>
-            </Link>
-          ))}
-        </div>
-      </main>
-    </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </main>
   );
 };
 

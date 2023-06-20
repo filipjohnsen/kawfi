@@ -13,8 +13,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${inter.className}`}>
-          <div>{children}</div>
+        <body className={`${inter.className} bg-[#0c1f23]`}>
+          <div className="pb-[48px]">{children}</div>
           <Header />
         </body>
       </html>
