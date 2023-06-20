@@ -29,8 +29,8 @@ const PlacePage = async ({
           className="rounded-b-3xl shadow-md"
         />
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#225560] to-transparent"></div>
-        <div className="absolute inset-0 z-20 flex items-end px-4 pb-1">
-          <h1 className="text-[24px] font-semibold text-white">{place.name}</h1>
+        <div className="absolute inset-0 z-20 flex items-end px-4 pb-2">
+          <h1 className="text-[18px]/6 font-semibold text-white">{place.name}</h1>
         </div>
       </div>
       <div className="py-4 text-center">
