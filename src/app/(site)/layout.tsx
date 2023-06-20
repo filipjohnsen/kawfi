@@ -14,10 +14,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <ClerkProvider>
       <html lang="en">
         <body className={`${inter.className}`}>
-          <div className="grid h-screen grid-rows-[1fr_64px]">
-            <div>{children}</div>
-            <Header />
-          </div>
+          <div>{children}</div>
+          <Header />
         </body>
       </html>
     </ClerkProvider>

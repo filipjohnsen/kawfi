@@ -19,9 +19,21 @@ const PlacePage = async ({
   const review = await client.fetch(`*[_type == "review" && place._ref == "${params.id}"]`);
 
   return (
-    <div className="mx-auto grid max-w-[1100px] pt-4">
-      <div className="text-center">
-        <h1 className="text-[30px] font-semibold">{place.name}</h1>
+    <div className="mx-auto grid h-screen max-w-[600px] grid-rows-[auto_1fr] bg-[#14333a]">
+      <div className="relative overflow-hidden rounded-b-3xl shadow-md shadow-[#225560]/40">
+        <Image
+          src={urlBuilder(place.image).width(600).height(300).url()}
+          width={600}
+          height={300}
+          alt=""
+          className="rounded-b-3xl shadow-md"
+        />
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#225560] to-transparent"></div>
+        <div className="absolute inset-0 z-20 flex items-end px-4 pb-1">
+          <h1 className="text-[24px] font-semibold text-white">{place.name}</h1>
+        </div>
+      </div>
+      <div className="py-4 text-center">
         <Review />
       </div>
     </div>
